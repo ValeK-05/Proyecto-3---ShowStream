@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowStream</title>
+    <link rel="icon" href="imagenes/favicon (7).ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!--Texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/f_cus__1_-removebg-preview.png" alt="" class="logoImg">
+        </div>
+         <div class="mainMenu">
+             <ul class="menu">
+            <li class="item"><a href="">Inicio</a></li>
+            <li class="item"><a href="">Categorias</a>
+                <ul id="subMenu">
+                    <li><a href="ciencia-ficcion.html">Ciencia Ficción</a></li>
+                    <li><a href="accion.html">Acción</a></li>
+                    <li><a href="suspenso.html">Suspenso</a></li>
+                    <li><a href="infantil.html">Infantil</a></li>
+                    <li><a href="aventura.html">Aventura</a></li>
+                    <li><a href="comedia.html">Comedia</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="">Estadisticas</a></li>
+            <li class="item"><a href="">Contacto</a></li>
+            </ul>
+         </div>
+        
+         <!--Buscador-->
+       
+      <div class="buscar">
+            <div class="buscarMini">
+                <input type="text" placeholder="Buscar" id="buscar">
+              <div id="lupa">
+                <button class="lupa"><svg class="lupita" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+                  </svg></button>
+              </div>
+                
+            </div>
+        </div>
+
+        
+    </header>
+
+      
+
+    <div class="slider">
+        <div class="lista">
+            <div class="carta A">
+                <img src="imagenes/Breaking_Bad.webp" alt="">
+                <div class="contenido">
+                    <p>Destacadas</p>
+                    <h2>Breaking Bad</h2>
+                    <p>El profesor calmado de química de una secundaria, Walter White cree que su vida no puede ser peor. Su salario apenas le alcanza para sostener a su familia, una situación que no mejora cuando su esposa da a luz y su hijo adolescente sufre de parálisis cerebral, pero Walter queda anonadado cuando se entera que tiene un cáncer terminal. Al concluir que su enfermedad iba a arruinar financieramente a su familia, él toma una decisión desesperada con el fin de ganar más dinero durante el tiempo que le queda y transforma un viejo vehículo de recreación en un laboratorio de matanfetaminas sobre ruedas.</p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="imagenes/the-last-of-us-serie-hbo-1673816891.avif" alt="">
+                <div class="contenido">
+                    <p>Destacadas</p>
+                    <h2>The Last Of Us</h2>
+                    <p>Joel y Ellie, dos personas conectadas por la brutalidad del mundo en el que viven, se ven obligados a enfrentarse a criaturas y asesinos despiadados, mientras viajan a través de un Estados Unidos posapocalíptico.</p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="imagenes/la-casa-de-papel-fotogramas-1606854545.avif" alt="">
+                <div class="contenido">
+                    <p>Destacadas</p>
+                    <h2>La Casa De Papel</h2>
+                    <p>Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo con éxito el gran golpe.</p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="imagenes/HD-wallpaper-hora-de-aventura-helado-rey.jpg" alt="">
+                <div class="contenido">
+                    <p>Destacadas</p>
+                    <h2>Hora de Aventura</h2>
+                    <p>Finn, que tiene doce años, lucha contra el mal en la Tierra de Ooo. Ayudado por su canino mágico, Jake, Fin recorre la Tierra de Ooo reparando lo incorrecto y luchando contra el mal. Usualmente la maldad proviene del Rey del Hielo, quien está buscando una esposa. Él ha decidido contraer nupcias con la princesa Bubblegum, aunque ella no desea casarse con él. Él insiste en arrebatarla y llevársela lejos, pero Finn y Jake, junto a Lady Raincorn, procuran hasta lo imposible por mantenerla alejada de todo peligro.</p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="imagenes/wall-e-1655132129.avif" alt="">
+                <div class="contenido">
+                    <p>Destacadas</p>
+                    <h2>Wall-E</h2>
+                    <p>Luego de pasar años limpiando la Tierra desierta, el robot Wall-E conoce a EVA y la sigue por toda la galaxia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Flechas-->
+
+    <div class="flechas">
+        <button id="anterior"><</button>
+        <button id="siguiente">></button>
+    </div>
+
+    <!--Vista Previa-->
+
+    <div class="vistaPrevia">
+        <div class="carta A">
+            <img src="imagenes/s-l1200.jpg" alt="">
+            <div class="contenido">
+                
+            </div>
+        </div>
+        <div class="carta">
+            <img src="imagenes/los-ultimos-de-nosotros.jpg" alt="">
+            <div class="contenido">
+                
+            </div>
+        </div>
+        <div class="carta">
+            <img src="imagenes/HD-wallpaper-season-5-serie-la-casa-de-papel-thumbnail.jpg" alt="">
+            <div class="contenido">
+                
+            </div>
+        </div>
+        <div class="carta">
+            <img src="imagenes/a0318abe8fc66d02be06dd771ef48da1.jpg" alt="">
+            <div class="contenido">
+                
+            </div>
+        </div>
+        <div class="carta">
+            <img src="imagenes/wall-e-movie-poster.avif" alt="">
+            <div class="contenido">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="principal">
+
+        <section class="most-viewed">
+            <h2 class="subTitulo">Los más vistos y buscados</h2>
+
+            <div class="botones">
+                <button id="mostrarTodo">Mostrar Todo</button>
+                <select name="tipo" id="tipo">
+                    <option value="Serie Animada" class="op">Serie Animada</option>
+                    <option value="Pelicula" class="op">Pelicula</option>
+                    <option value="Telenovela" class="op">Telenovela</option>
+                    <option value="Serie" class="op">Serie</option>
+                </select>
+                <button id="ordenarAlfaA-Z">De A-Z</button>
+                <button id="ordenarAlfaZ-A">De Z-A</button>
+            </div>
+
+            <div class="container" id="container">
+
+
+            </div>
+        </section>
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+    <script type="module" src="scriptIndex.js"></script>
+</body>
+</html>

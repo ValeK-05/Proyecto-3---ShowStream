@@ -1,0 +1,577 @@
+body{
+    margin: 10px;
+    background-color: black;
+    color: white;
+    height: 2000px;
+}
+
+header{
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.mainMenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+
+.logoImg{
+    width: 300px;
+    padding-top: 20px;
+    transform: translateX(-50px);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.menu ul, .menu li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu ul{
+    list-style: none;
+    width: 100%;
+}
+
+.menu li{
+    float: left;
+    position: relative;
+    width: auto;
+}
+
+.menu a{
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 15px 55px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: #ffffff;
+}
+
+.menu a:hover{
+    color:  #a3b6e6;
+    
+}
+
+#subMenu a{
+    padding-top: 10px;
+    color: rgb(184, 182, 182);
+}
+
+#subMenu a:hover{
+    color:  #a3b6e6;
+}
+
+
+#subMenu{
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+    background-color:rgba(66, 66, 66, 0.582);
+    border-radius: 5px;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+
+li:hover ul#subMenu{
+    opacity: 1;
+    top: 50px;
+    visibility: visible;
+    transform: translateY(3px);
+}
+
+#subMenu li{
+    float: none;
+    width: 100%;
+}
+
+.item{
+    padding: 5px;
+    transition: all 0.8s ease;
+    border-radius: 5px;
+}
+
+.item:hover{
+    color:  #a3b6e6;
+}
+
+
+/*Buscador*/
+
+.buscar{
+    display: flex;
+    justify-content: end;
+    margin-left: 100px;
+}
+
+.buscarMini{
+    display: flex;
+}
+
+input{
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px;
+    transition: border 0.2s ease;
+}
+
+input:hover{
+    border: 2px solid  #a3b6e6;
+}
+
+.lupa{
+    padding: 6px 20px;
+    border: none;
+    cursor: pointer;
+    background-color:  #a3b6e6;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    transition: bakcground-color 0.3s ease;
+}
+
+
+
+/*Slider*/
+
+.slider{
+    height:100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .lista{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slider .lista .carta{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+ 
+.slider .lista .carta img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.slider .lista .carta.A::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, black 20%, transparent);
+    z-index: 2;
+}
+
+.slider .lista .carta .contenido{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 600px;
+    max-width: 80%;
+    z-index: 3;
+    cursor: default;
+    padding: 10px;
+}
+
+.slider .lista .carta .contenido p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.slider .lista .carta .contenido h2{
+    font-size: 4rem;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.slider .lista .carta.A{
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .lista .carta.A p:nth-child(1),
+.slider .lista .carta.A h2,
+.slider .lista .carta.A p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+
+.slider .lista .carta.A h2{
+    animation-delay: 1s;
+}
+
+.slider .lista .carta.A p:nth-child(3){
+    animation-duration: 1.3s;
+}
+
+/*Flechas*/
+
+.flechas{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+   
+}
+
+.flechas button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: 0.5s;
+}
+
+.flechas button:hover{
+    background-color: #eee;
+    color: black;
+}
+
+/*Vista Previa de peliculas y series del slider*/
+
+.vistaPrevia{
+    position: absolute;
+    bottom: 1px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 98%;
+    height: 200px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+
+.vistaPrevia::-webkit-scrollbar{
+    width: 0;
+}
+
+.vistaPrevia .carta{
+    width: 140px;
+    height: 190px;
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+}
+
+.vistaPrevia .carta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.vistaPrevia .carta.A{
+    filter: brightness(1.5);
+}
+
+.vistaPrevia .carta .contenido{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+
+/*Cartas de peliculas y series*/
+
+.principal {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Section for 'Los más vistos y buscados' */
+.most-viewed {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.most-viewed h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #a3b6e6;
+    margin-bottom: 30px;
+}
+
+/* Container for movie cards */
+.most-viewed .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Style for each card */
+.most-viewed .card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.most-viewed .card img {
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Card hover effect */
+.most-viewed .card:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Content overlaid on hover */
+.most-viewed .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    text-align: center;
+}
+
+.most-viewed .card:hover .card-content {
+    transform: translateY(0);
+}
+
+.most-viewed .card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent; /* Cambiar a transparente */
+    border: none; /* Eliminar borde */
+    box-shadow: none; /* Eliminar sombra */
+    overflow: hidden;
+    width: 200px; /* Ajusta según sea necesario */
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar padding */
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 320px; /* Mantiene la relación de aspecto */
+    display: block;
+    margin: 0; /* Eliminar margen */
+    
+}
+
+
+
+  .card img + img {
+    margin-top: 10px; /* Espaciado entre las imágenes dentro del card */
+  }
+  
+  .card:hover .name{
+    transform: scale(1,1);
+  }
+  
+  
+  article {
+      position: relative;
+      width: 200px;
+      transition: all 0.3s ease;
+    }
+    
+    article img:first-child {
+      box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+      border-radius: 4px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    article img:last-child {
+      position: absolute;
+      width: 200px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(25%);
+      transition: 0.3s ease;
+      opacity: 0;
+    }
+    
+    article:hover {
+      transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+    }
+    
+    article::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0) 95%
+      );
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    article:hover::before {
+      opacity: 1;
+    }
+    
+    article:hover img:last-child {
+      opacity: 1;
+      transform: translateY(10%);
+    }
+
+    .name {
+        margin: 0; /* Eliminar margen superior e inferior */
+        font-size: 18px; /* Tamaño de la fuente */
+        font-weight: bold; /* Negrita */
+        color: #fff; /* Color del texto */
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+        padding: 8px 5px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        width: 100%; /* Asegura que el fondo del nombre ocupe todo el ancho */
+        text-align: center; /* Centrar el texto */
+        position: relative; /* Posiciona el nombre correctamente */
+        bottom: 0;
+    }
+
+    /*Botones de filtros*/
+
+    .botones{
+        display: flex;
+        justify-content: start;
+    }
+
+    .botones button{
+        border: 1px solid;
+        padding: 7px;
+        border-radius: 2px;
+        margin-left: 5px;
+        color: white;
+        background-color: transparent;
+        transition: all 0.5s ease;
+    }
+
+    .botones button:hover{
+        border: 1px  #a3b6e6 solid;
+        color: #a3b6e6;
+    }
+
+    select{
+        border: 1px solid;
+        padding: 6px;
+        border-radius: 2px;
+        margin-left: 5px;
+        color: white;
+        background-color: transparent;
+        transition: all 0.5s ease;
+    }
+
+    select:hover{
+        border: 1px solid #a3b6e6;
+        color: #a3b6e6;
+    }
+
+   .op{
+    color: black;
+   }
+
+   .subTitulo{
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-shadow: 
+    1px 1px 0 rgb(255, 255, 255),  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    margin-top: 0;
+   }
+
+
+    
