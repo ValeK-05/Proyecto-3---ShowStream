@@ -125,12 +125,37 @@ function filtrarPorTitulo(moviesAndSeries, title){
 function mostrarHTML(moviesAndSeries){
     document.getElementById("container").innerHTML="";
     for(let i=0;i<moviesAndSeries.length;i++){
-        document.getElementById("container").innerHTML+=`
-         <article class="card">
-                    <img src="${moviesAndSeries[i].imagen}" alt="Poster de pelicula">
-                    <div class="name">${moviesAndSeries[i].titulo}</div>
-                    <img src="${moviesAndSeries[i].imagen2}" alt="Imagen emergente">
-                </article>
-        `
+        document.getElementById("container").innerHTML += `
+        <article data-bs-toggle="modal" data-bs-target="#cartaInfo" class="card mostrarInfo" data-id="${moviesAndSeries[i].titulo}">
+                   <img src="${moviesAndSeries[i].imagen}" alt="Avatar the way of water">
+                   <img src="${moviesAndSeries[i].imagen2}" alt="she">
+               </article>
+       `
     }
 }
+
+// Ahora agregamos los eventos a cada artículo
+let articles = document.getElementsByClassName("mostrarInfo");
+for (let i = 0; i < articles.length; i++) {
+    articles[i].addEventListener("click", function() {
+        // Aquí va el código que quieres ejecutar cuando se haga clic en el artículo
+        const nombre = this.getAttribute("data-id");
+        //console.log("Se hizo clic en el artículo:"+ nombre);
+
+        let peliculaEncontrada= moviesAndSeries.find(pelicula=>pelicula.titulo== nombre)
+        console.log(peliculaEncontrada)
+
+        document.getElementById("cartaCategoria").innerHTML="categoria: "+peliculaEncontrada.categoria;
+
+        document.getElementById("cartaAño").innerHTML="año: " +peliculaEncontrada.año;
+
+        document.getElementById("cartaDescripcion").innerHTML="descripcion: " +peliculaEncontrada.descripcion;
+
+       document.getElementById("cartaDirigido").innerHTML="dirigido por: " +peliculaEncontrada.dirigido_por;
+
+        document.getElementById("cartaTitulo").innerHTML= nombre;
+    });
+}
+
+
+

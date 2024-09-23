@@ -430,6 +430,7 @@ input:hover{
     margin: 0; /* Eliminar márgenes */
     padding: 0; /* Eliminar padding */
     text-align: center;
+    cursor: pointer;
 }
 
 .card img {
@@ -534,6 +535,7 @@ input:hover{
         color: white;
         background-color: transparent;
         transition: all 0.5s ease;
+        cursor: pointer;
     }
 
     .botones button:hover{
@@ -549,6 +551,7 @@ input:hover{
         color: white;
         background-color: transparent;
         transition: all 0.5s ease;
+        cursor: pointer;
     }
 
     select:hover{
@@ -571,7 +574,49 @@ input:hover{
     -1px  1px 0 black,
      1px  1px 0 black;
     margin-top: 0;
+    cursor: default;
    }
 
+   footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
-    
+footer .redes-sociales {
+    margin-top: 10px;
+}
+
+footer .redes-sociales a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+.modal-body{
+    background-color: black;
+    color: white;
+    cursor: default;
+}
+
+.modal-header{
+    background-color: black;
+    color: #a3b6e6;
+    cursor: default;
+}
+
+.modal-footer{
+    background-color: black;
+}
+
+.modal-content{
+    box-shadow: 0 0 20px #a3b6e6;
+}
